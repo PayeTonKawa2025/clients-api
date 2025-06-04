@@ -15,7 +15,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="maModaleLabel">Informations</h5>
+                <h5 class="modal-title" id="maModaleLabel">Suppression</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
 
@@ -32,6 +32,29 @@
     </div>
 </div>
 
+<div class="modal fade" id="modaleAjoutClient" tabindex="-1" aria-labelledby="modaleAjoutClientLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modaleAjoutClientLabel">Ajouter un client</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>ON VA METTRE UN TRUC ICI PLUS TARD</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Enregistrer</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 <body>
 <header>
     <h1>PayeTonKawa</h1>
@@ -47,7 +70,7 @@
 <main class="main-client-liste">
     <section class="client-consult">
         <h2>Consultation fichier client</h2>
-        <button>Ajouter un client</button>
+        <button id="boutonAjoutClient">Ajouter un client</button>
         <table>
             <thead>
             <tr>
@@ -84,8 +107,8 @@
 <footer>
     <p>&copy; 2025 PayeTonKawa. Tous droits réservés.</p>
 </footer>
-<script src="scriptFichierClient.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scriptFichierClient.js"></script>
 
 </body>
 </html>

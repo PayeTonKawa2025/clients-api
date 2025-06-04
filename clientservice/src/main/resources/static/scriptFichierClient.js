@@ -59,6 +59,14 @@ window.filtrerTableau = function(indexColonne) {
                     });
     });
 
+const boutonAjoutClient = document.getElementById('boutonAjoutClient');
+const modaleAjoutClient = new bootstrap.Modal(document.getElementById('modaleAjoutClient'));
+
+boutonAjoutClient.addEventListener('click', function () {
+    modaleAjoutClient.show();
+});
+
+
 const maModale = document.getElementById('maModale');
 const buttonSuppression = document.getElementById('supprimerClient');
 
