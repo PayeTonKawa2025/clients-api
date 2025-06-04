@@ -168,3 +168,15 @@ button.btn.btn-valider{
 background-color : var(--moka);
 color:white;
 }
+
+
+.custom-modal-ajout {
+    max-width: 900px;
+}
+
+@media (max-width: 768px) {
+    .custom-modal-ajout {
+        max-width: 95%;
+    }
+}
+

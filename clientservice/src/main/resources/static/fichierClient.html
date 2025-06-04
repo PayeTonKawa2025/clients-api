@@ -33,7 +33,7 @@
 </div>
 
 <div class="modal fade" id="modaleAjoutClient" tabindex="-1" aria-labelledby="modaleAjoutClientLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg custom-modal-ajout">
         <div class="modal-content">
 
             <div class="modal-header">
@@ -42,7 +42,46 @@
             </div>
 
             <div class="modal-body">
-                <p>ON VA METTRE UN TRUC ICI PLUS TARD</p>
+                <form id="formAjoutClient">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="companyName" class="form-label">Entreprise</label>
+                                <input type="text" class="form-control" id="companyName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="postalCode" class="form-label">Code postal</label>
+                                <input type="text" class="form-control" id="postalCode" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="city" class="form-label">Ville</label>
+                                <input type="text" class="form-control" id="city" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="profileFirstName" class="form-label">Profil - Prénom</label>
+                                <input type="text" class="form-control" id="profileFirstName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="profileLastName" class="form-label">Profil - Nom</label>
+                                <input type="text" class="form-control" id="profileLastName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Pseudo</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
 
             <div class="modal-footer">
@@ -53,6 +92,7 @@
         </div>
     </div>
 </div>
+
 
 
 <body>

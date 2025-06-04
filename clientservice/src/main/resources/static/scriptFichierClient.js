@@ -66,6 +66,45 @@ boutonAjoutClient.addEventListener('click', function () {
     modaleAjoutClient.show();
 });
 
+const boutonEnregistrer = document.querySelector('#modaleAjoutClient .btn-success');
+
+boutonEnregistrer.addEventListener('click', function () {
+    const client = {
+        companyName: document.getElementById('companyName').value,
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        postalCode: document.getElementById('postalCode').value,
+        city: document.getElementById('city').value,
+        profileFirstName: document.getElementById('profileFirstName').value,
+        profileLastName: document.getElementById('profileLastName').value,
+        username: document.getElementById('username').value
+    };
+
+    fetch('/api/clients', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(client)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erreur lors de l'ajout du client");
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Tu peux recharger la liste ou ajouter la ligne manuellement ici
+        bootstrap.Modal.getInstance(document.getElementById('modaleAjoutClient')).hide();
+        location.reload(); // Option simple : recharge toute la page
+    })
+    .catch(error => {
+        console.error('Erreur API:', error);
+        alert("Erreur lors de l'enregistrement");
+    });
+});
+
+
 
 const maModale = document.getElementById('maModale');
 const buttonSuppression = document.getElementById('supprimerClient');
