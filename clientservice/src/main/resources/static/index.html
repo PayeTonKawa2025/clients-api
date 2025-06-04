@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayeTonKawa - Consultation Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>NESPRESSO</h1>
+    <p class="slogan">Le goût du café, l’élégance du service</p>
+    <nav>
+        <ol>
+            <li class="crumb"><a href="fichierClient.html">Fichier client</a></li>
+            <li class="crumb"><a href="index.html">Fiche client</a></li>
+        </ol>
+    </nav>
+</header>
+
+<main>
+    <section class="client-consult">
+        <h2>Consultation Client</h2>
+        <form id="client-form">
+            <label for="client-id">Identifiant client :</label>
+            <input type="text" id="client-id" name="client-id" placeholder="Ex: 12345" required>
+
+            <label for="client-name">Nom complet :</label>
+            <input type="text" id="client-name" name="client-name" readonly>
+
+            <label for="company">Adresse e-mail :</label>
+            <input type="text" id="company" name="company" readonly>
+
+            <button type="submit">Rechercher</button>
+        </form>
+        <p id="result-message"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 PayeTonKawa. Tous droits réservés.</p>
+</footer>
+<script src="scriptIndex.js"></script>
+</body>
+</html>

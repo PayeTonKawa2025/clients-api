@@ -1,0 +1,170 @@
+:root {
+    --fond-clair: #f4eee6;
+    --brun-clair: #d2b48c;
+    --moka: #6f4e37;
+    --chocolat: #3e2723;
+    --texte: #2c1b12;
+    --accent: #a97458;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--fond-clair);
+    color: var(--texte);
+}
+
+header {
+    background-color: var(--chocolat);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header nav li{
+    list-style: none;
+    margin : 0 3.2rem;
+}
+
+header nav li a{
+    text-decoration : none;
+    color : white;
+}
+
+
+header nav li a:hover{
+    color: var(--moka);
+}
+
+header nav ol{
+display:flex;
+justify-content : center;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+    margin-top : 2rem;
+    margin-bottom : 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(63, 45, 30, 0.2);
+}
+
+.client-consult h2{
+    color: var(--moka);
+    margin-bottom: 1rem;
+}
+
+.main-client-liste{
+    width : 80%;
+    max-width : 80%;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 0.6rem;
+    border: 1px solid var(--brun-clair);
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--moka);
+    outline: none;
+}
+
+button {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--moka);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--brun-clair);
+    color: var(--texte);
+    position: relative;
+    bottom: 0;
+    left:0;
+    right:0;
+
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(63, 45, 30, 0.15);
+    text-align: center;
+}
+
+thead {
+    background-color: var(--moka);
+    color: #fff;
+}
+
+thead th {
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--brun-clair);
+    color: var(--texte);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--fond-clair);
+}
+
+tbody tr:hover {
+    background-color: var(--brun-clair);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.btn.btn-valider{
+background-color : var(--moka);
+color:white;
+}
