@@ -1,6 +1,7 @@
 package fr.payetonkawa.clients.controller;
 
 import fr.payetonkawa.clients.dto.ClientDto;
+import fr.payetonkawa.clients.exception.MissingDataException;
 import fr.payetonkawa.clients.service.ClientService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -20,13 +21,13 @@ public class ClientController {
     }
 
     @GetMapping("/{id}")
-    public ClientDto getClientById(Long id) {
+    public ClientDto getClientById(@PathVariable Long id) {
         return clientService.getClientById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Client not found"));
+                .orElseThrow(() -> new MissingDataException("Client not found"));
     }
 
     @PostMapping
-    public ClientDto createClient(ClientDto clientDto) {
+    public ClientDto createClient(@RequestBody ClientDto clientDto) {
         return clientService.createClient(clientDto);
     }
 
