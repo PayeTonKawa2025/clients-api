@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "80df2024-d582-4efb-a1a3-4cd51e094af8",
+		"name": "Clients-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21278304"
+	},
+	"item": [
+		{
+			"name": "Get all clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}",
+					"host": [
+						"{{HOST}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get client by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/{{CLIENTID}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"{{CLIENTID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Client\",\r\n    \"username\": \"client1\",\r\n    \"firstName\": \"No body\",\r\n    \"lastName\": \"Any body\",\r\n    \"profileFirstName\": \"No body\",\r\n    \"profileLastName\": \"Any body\",\r\n    \"postalCode\": \"35000\",\r\n    \"city\": \"Rennes\",\r\n    \"companyName\": \"My Company\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}",
+					"host": [
+						"{{HOST}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update client",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Super\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/{{CLIENTID}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"{{CLIENTID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete client by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Super\"\r\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/{{CLIENTID}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"{{CLIENTID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:8080/v1",
+			"type": "string"
+		},
+		{
+			"key": "CLIENTID",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
