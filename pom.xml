@@ -16,12 +16,6 @@
     <properties>
         <java.version>21</java.version>
     </properties>
-    <repositories>
-        <repository>
-            <id>ldpt-public</id>
-            <url>https://maven.ldpt.fr/public</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
@@ -54,12 +48,6 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.6.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>fr.payetonkawa</groupId>
-            <artifactId>common-exchange</artifactId>
-            <version>0.0.1</version>
         </dependency>
 
         <dependency>
